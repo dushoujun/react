@@ -18,8 +18,8 @@ const pic = [
 ];
 
 function eat() {
-	let temp = <li>{food[i]}</li>;
-	return temp;
+	console.log(React.createElement);
+	return <li>{food[i]}</li>;
 }
 
 function selectPic() {
@@ -41,6 +41,13 @@ const element = (
 		</ul>
 	</div>
 )
+
+const element2 = React.createElement(
+	'h1',
+	{'className':'title'},
+	'Hello World'
+)
+
 
 ReactDOM.render(
   element,
