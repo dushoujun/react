@@ -22,6 +22,9 @@ function filter(str) {
       arr.push(str,match)
       rs && data.push(arr)
     });
+    if(data.length == 0) {
+      data[0] = ['','找不到相关城市','','','','',]
+    }
     return data;
 }
 class Suggest extends React.Component {

@@ -13,10 +13,16 @@ class Item extends React.Component{
   }
 
   itemClick(ev) {
+    if(this.props.data[1] == '找不到相关城市'){
+      return;
+    }
     this.props.onItemSelect(this.props.data[1])
   }
 
   handleMouseenter() {
+    if(this.props.data[1] == '找不到相关城市'){
+      return;
+    }
     this.setState({
       className : 'hover'
     })
